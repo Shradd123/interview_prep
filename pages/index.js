@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
@@ -55,10 +56,18 @@ export default function Home() {
     <div style={styles.container}>
       {/* Navbar */}
       <nav style={styles.navbar}>
-        <a href="/" style={styles.navLink}>Home</a>
-        <a href="/coding-test" style={styles.navLink}>Coding Test</a>
-        <a href="/behavioral" style={styles.navLink}>Behavioral</a>
-        <a href="/admin" style={styles.navLink}>Admin</a>
+        <Link href="/" legacyBehavior>
+          <a style={styles.navLink}>Home</a>
+        </Link>
+        <Link href="/coding-test" legacyBehavior>
+          <a style={styles.navLink}>Coding Test</a>
+        </Link>
+        <Link href="/behavioral" legacyBehavior>
+          <a style={styles.navLink}>Behavioral</a>
+        </Link>
+        <Link href="/admin" legacyBehavior>
+          <a style={styles.navLink}>Admin</a>
+        </Link>
       </nav>
 
       <h1 style={styles.title}>Interview Prep</h1>
@@ -185,9 +194,6 @@ const styles = {
     transition: "0.3s",
     marginTop: "10px",
   },
-  buttonHover: {
-    background: "#005bb5",
-  },
   message: {
     textAlign: "center",
     fontSize: "16px",
@@ -197,3 +203,4 @@ const styles = {
     fontWeight: "bold",
   },
 };
+
