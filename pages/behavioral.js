@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import BehavioralQuestions from "../components/BehavioralQuestions";
+import BehavioralQuestions from "@/components/BehavioralQuestions"; // ✅ Uses absolute path
+
 
 export default function BehavioralTestPage() {
   const [question, setQuestion] = useState("");
