@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { supabase } from "@/utils/supabaseClient"; // ✅ Uses absolute path
+import { supabase } from "@/utils/supabase"; // ✅ Uses absolute path
 
 export default function AdminDashboard() {
   const [submissions, setSubmissions] = useState([]);
