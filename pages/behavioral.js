@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import BehavioralQuestions from "@/components/BehavioralQuestions"; // ✅ Uses absolute path
+import BehavioralQuestions from "@/components/BehaviorQuestions"; // ✅ Uses absolute path
 
 
 export default function BehavioralTestPage() {
