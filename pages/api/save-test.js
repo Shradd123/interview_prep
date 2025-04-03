@@ -1,4 +1,4 @@
-import prisma from "../../utils/prismaClient";
+import prisma from "../../utils/PrismaClient";
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
   const { userId, type, question, answer } = req.body;
